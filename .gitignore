@@ -1,0 +1,19 @@
+# Jekyll defaults
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+GemFile.lock
+
+# Bundler
+.bundle/
+vendor/bundle/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local

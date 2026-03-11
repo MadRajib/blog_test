@@ -26,30 +26,23 @@ permalink: /about/
 <h1>// <span class="accent">about</span></h1>
 <div class="about-content">
 
-**bits & bytes** is a technical blog about C and C++ programming.
-Not the "here's how to write a for loop" kind — the kind where we read assembly output,
-measure cache miss rates, and dig into why the compiler makes surprising choices.
-
-I'm a systems programmer who spends too much time on Compiler Explorer and not enough
-time sleeping. I work on performance-critical software and write about what I learn along
-the way: memory models, undefined behavior, modern C++ idioms, and the occasional foray
-into kernel internals.
-
-All code examples are compiled and tested. If something is wrong, open an issue on GitHub.
+<p>
+  <strong>madrajib lab</strong> is a technical blog about C and C++ programming. 
+</p>
 
 <div class="terminal-banner" style="margin-top:40px">
   <div class="term-dots">
     <div class="term-dot"></div><div class="term-dot"></div><div class="term-dot"></div>
   </div>
   <div class="term-line"><span class="prompt">$</span> <span class="cmd">whoami</span></div>
-  <div class="term-line"><span class="output">Alex Mercer</span></div>
+  <div class="term-line"><span class="output">madrajib lab</span></div>
   <div class="term-line"><span class="prompt">$</span> <span class="cmd">cat interests.txt</span></div>
   <div class="term-line"><span class="output">systems programming, compilers, performance, embedded C, Linux internals</span></div>
   <div class="term-line"><span class="prompt">$</span> <span class="cmd">uname -a</span></div>
-  <div class="term-line"><span class="output">Linux 6.8.0-generic x86_64 GNU/Linux</span> <span class="cursor"></span></div>
+  <div class="term-line"><span class="output">Linux 6.8.0-generic x86_64 GNU/Linux</span> <span class="cursor"></span></div>class="cursor"></span></div>
 </div>
 
-<div class="skills-grid">
+<!-- <div class="skills-grid">
   <div class="skill-item">
     <div class="skill-name">C (C11/C17)</div>
     <div class="skill-level">████████░░ Expert</div>
@@ -74,7 +67,7 @@ All code examples are compiled and tested. If something is wrong, open an issue 
     <div class="skill-name">CMake / Build</div>
     <div class="skill-level">█████░░░░░ Intermediate</div>
   </div>
-</div>
+</div> -->
 
 </div>
 </div>

@@ -1,14 +1,11 @@
-title: "bits & bytes"
-description: "Deep dives into C and C++ — memory management, performance, systems programming, and the beauty of low-level code."
+title: "madrajib lab"
+description: "Dev Blog"
 author: "MadRajib Lab"
 
-# ── EDIT THESE ───────────────────────────────────────────────
-# For a repo named  yourusername.github.io  →  baseurl: ""
-# For any other repo named  my-blog         →  baseurl: "/my-blog"
 url: "https://madrajib.github.io"
 baseurl: "/blog_test"
 
-github_url: "https://github.com/yourusername"
+github_url: "https://github.com/MadRajib"
 # ─────────────────────────────────────────────────────────────
 
 # Build

@@ -1,0 +1,65 @@
+---
+layout: default
+title: Archive
+permalink: /archive/
+---
+
+<style>
+  .archive-hero { padding: 60px 0 48px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
+  .archive-hero h1 { font-size: 2rem; margin-bottom: 12px; }
+  .archive-hero p { color: var(--text-muted); font-style: italic; }
+  .year-group { margin-bottom: 48px; }
+  .year-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem; color: var(--text-dim);
+    letter-spacing: 0.15em; text-transform: uppercase;
+    margin-bottom: 16px; padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .year-label::before { content: '#'; color: var(--amber); }
+  .archive-list { display: grid; gap: 2px; }
+  .archive-item {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    align-items: center; gap: 20px;
+    padding: 14px 16px; border-radius: var(--radius);
+    transition: background var(--transition);
+    color: inherit; text-decoration: none;
+  }
+  .archive-item:hover { background: var(--bg-alt); }
+  .archive-item:hover .archive-title { color: var(--amber); }
+  .archive-date { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--text-dim); }
+  .archive-title { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--text); transition: color var(--transition); }
+  .archive-tags { display: flex; gap: 6px; }
+  @media (max-width: 580px) {
+    .archive-item { grid-template-columns: 1fr; gap: 6px; }
+    .archive-tags { display: none; }
+  }
+</style>
+
+<div class="archive-hero">
+  <h1>// <span style="color:var(--amber)">archive</span></h1>
+  <p>All posts, chronologically. {{ site.posts | size }} articles and counting.</p>
+</div>
+
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+{% for year_group in posts_by_year %}
+<div class="year-group">
+  <div class="year-label">{{ year_group.name }}</div>
+  <div class="archive-list">
+    {% for post in year_group.items %}
+    <a href="{{ post.url | relative_url }}" class="archive-item">
+      <span class="archive-date">{{ post.date | date: "%b %d" }}</span>
+      <span class="archive-title">{{ post.title }}</span>
+      <div class="archive-tags">
+        {% for tag in post.tags limit: 2 %}
+          <span class="tag tag-{{ tag | downcase | replace: '+', 'p' | replace: ' ', '-' }}">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}

@@ -1,0 +1,28 @@
+title: "bits & bytes"
+description: "Deep dives into C and C++ — memory management, performance, systems programming, and the beauty of low-level code."
+author: "MadRajib Lab"
+
+# ── EDIT THESE ───────────────────────────────────────────────
+# For a repo named  yourusername.github.io  →  baseurl: ""
+# For any other repo named  my-blog         →  baseurl: "/my-blog"
+url: "https://madrajib.github.io"
+baseurl: "/blog_test"
+
+github_url: "https://github.com/yourusername"
+# ─────────────────────────────────────────────────────────────
+
+# Build
+markdown: kramdown
+highlighter: none
+
+kramdown:
+  input: GFM
+  syntax_highlighter: none
+
+permalink: /posts/:slug/
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - README.md

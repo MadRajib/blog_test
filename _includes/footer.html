@@ -1,0 +1,13 @@
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span>{</span>{{ site.title }}<span>}</span> — written in the margins of memory
+    </div>
+    <div class="footer-links">
+      {% if site.github_url %}
+      <a href="{{ site.github_url }}" target="_blank" rel="noopener">GitHub</a>
+      {% endif %}
+      <a href="{{ '/about' | relative_url }}">About</a>
+    </div>
+  </div>
+</footer>

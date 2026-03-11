@@ -788,3 +788,15 @@ footer {
 /* Strong / em in post body */
 .post-content strong { color: var(--text); font-weight: 700; }
 .post-content em { font-style: italic; color: var(--text-muted); }
+
+/* ─── Mermaid diagrams ───────────────────────────────────── */
+.mermaid {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+  margin: 1.8em 0;
+  overflow-x: auto;
+  text-align: center;
+}
+.mermaid svg { max-width: 100%; height: auto; }

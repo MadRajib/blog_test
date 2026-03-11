@@ -1,6 +1,37 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.js"></script>
 <script>
+  // ── Mermaid ────────────────────────────────────────────────
+  // kramdown outputs ```mermaid as <code class="language-mermaid">
+  // We convert those blocks to <div class="mermaid"> before hljs runs
+  document.querySelectorAll('code.language-mermaid').forEach(el => {
+    const div = document.createElement('div');
+    div.className = 'mermaid';
+    div.textContent = el.textContent;
+    el.parentElement.replaceWith(div);
+  });
+
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    themeVariables: {
+      background:      '#161b22',
+      primaryColor:    '#1f2937',
+      primaryBorderColor: '#30363d',
+      primaryTextColor:   '#e6edf3',
+      lineColor:       '#f0883e',
+      edgeLabelBackground: '#161b22',
+      clusterBkg:      '#13191f',
+      titleColor:      '#e6edf3',
+      nodeTextColor:   '#e6edf3',
+      fontFamily:      'JetBrains Mono, monospace',
+    }
+  });
+
+  // ── Highlight.js ───────────────────────────────────────────
+  // Run after mermaid blocks are removed so hljs doesn't try to highlight them
   hljs.highlightAll();
 
+  // ── Theme toggle ───────────────────────────────────────────
   const html = document.documentElement;
   const btn  = document.querySelector('.theme-toggle');
 
